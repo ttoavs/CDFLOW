@@ -1,0 +1,22 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+
+*.DS_Store
+*.sel
+
+*.txts
+*.html
+SQLConnect.R
+
+# Exclude folders with data files, they are too big for github
+Data/Created/*
+Data/Downloaded/Chemical/*
+Data/Downloaded/Site/*
+Data/Downloaded/NHDPlusNationalData/*
+# except .gitkeep to keep folder structure in place
+!Data/Created/.gitkeep
+!Data/Downloaded/Chemical/.gitkeep
+!Data/Downloaded/Site/.gitkeep
+!Data/Downloaded/NHDPlusNationalData/.gitkeep
