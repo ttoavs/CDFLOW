@@ -33,7 +33,7 @@ for(i in 1:length(state_vec)){
 
 # Check to see which files are already downloaded and set the difference
 
-files <- list.files(path = "Data/Downloaded/Chemical", pattern = "*.csv")
+files <- list.files(path = "Data/Downloaded/Site", pattern = "*.csv")
 missing <- setdiff(paste0(sample.df$sample, ".csv"), files)
 sample.df <- sample.df %>%
   filter(files %in% missing)
@@ -50,7 +50,6 @@ args <- list(statecode = "",
              characteristicName = "Alkalinity%2C%20total"
 )
 
-sample.df <- sample.df[1,]
 
 # Create progress bar object
 pb <- progress_bar$new(format = "(:spin) [:bar] :percent [Elapsed time: :elapsedfull || Estimated time remaining: :eta]",
