@@ -15,6 +15,6 @@ CDFLOW <- merge(estimates, obsv, by = "obs_id")
 CDFLOW <- merge(CDFLOW, sites, by = "MonitoringLocationIdentifier")
 
 CDFLOW <- CDFLOW %>%
-  select(-obs_id)
+  select(-obs_id ,-MonitoringLocationIdentifier)
 
 write.csv(CDFLOW, "CDFLOW.csv", row.names = FALSE)
